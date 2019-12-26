@@ -9,7 +9,7 @@
     "test": "jest",
     "test:dev": "env-cmd -f ./config/test.env jest --watch --runInBand"
   },
-   "jest": {
+  "jest": {
     "testEnvironment": "node"
   },
   "author": "",
