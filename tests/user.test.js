@@ -5,9 +5,12 @@ const { userOneId, userOne, setupDatabase } = require('./fixtures/db')
 
 beforeEach(setupDatabase)
 
-console.log(process.env.MONGODB_URL)
 
 test('Should signup a new user', async () => {
+    
+console.log(process.env.MONGODB_URL)
+
+
     const response = await request(app).post('/auth/signup').send({
         name: 'taeyeon',
         email: 'taeyeon@example.com',
