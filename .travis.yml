@@ -7,4 +7,7 @@ install:
     - npm ci
 
 script:
+    - echo $MONGODB_URL
+    - echo $PORT
+    - echo $JWT_SECRET
     - npm test
