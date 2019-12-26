@@ -8,7 +8,6 @@ beforeEach(setupDatabase)
 
 test('Should signup a new user', async () => {
     
-console.log(process.env.MONGODB_URL)
 
 
     const response = await request(app).post('/auth/signup').send({
