@@ -2,12 +2,14 @@ const User = require('../models/user')
 
 exports.signup = async (req, res) => {
     const user = new User(req.body)
-
+    console.log(user)
     try {
         await user.save()
         const token = await user.generateAuthToken()
+        console.log(token)
         res.status(201).json({ user, token })
     } catch (e) {
+        console.log(e)
         res.status(400).json(e)
     }
 }
