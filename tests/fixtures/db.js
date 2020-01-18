@@ -25,6 +25,13 @@ const userTwo = {
     }]
 }
 
+const taskOne = {
+    _id: new mongoose.Types.ObjectId(),
+    description: 'First task',
+    completed: false,
+    owner: userOne._id
+}
+
 const setupDatabase = async () => {
     await User.deleteMany()
     await new User(userOne).save()
